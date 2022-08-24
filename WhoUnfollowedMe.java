@@ -52,12 +52,15 @@ public class WhoUnfollowedMe{
      } catch (FileNotFoundException e) {
         e.printStackTrace();
      }
+     ArrayList<String> unfollowers = getUnfollowers(followers, following);
+     String result = arrayToString(unfollowers);
 
-     String unfollowers = arrayToString(getUnfollowers(followers, following));
-
-     if(unfollowers != ""){
-        System.out.println("\nUnfollow these accounts:\n\n");
-        System.out.println(unfollowers);
+     if(result != ""){
+        System.out.println("\n" + String.valueOf(unfollowers.size()) + " accounts do not follow you:\n\n");
+        System.out.println(result);
+     }
+     else{
+        System.out.println("\n \\_(ツ)_/¯ \n\n");
      }
         
     }
