@@ -6,7 +6,7 @@ Install the following packages:
     -time
     -sys
 
-Use Powershell to run the program by using the following command:
+Use Git Bash to run the program on Windows by using the following command:
 
     bash ./unfollowers.sh
 
